@@ -10,7 +10,7 @@ set -euo pipefail
 
 function clone_and_patch() {
     if [ ! -d libdatachannel ] ; then
-      git clone git@github.com:paullouisageneau/libdatachannel.git
+      git clone https://github.com/paullouisageneau/libdatachannel
       pushd libdatachannel
       git checkout refs/tags/v0.24.0
       git submodule update --init --recursive --depth 1
@@ -21,14 +21,14 @@ function clone_and_patch() {
     fi
     
     if [ ! -d OpenSSL ] ; then
-      git clone git@github.com:krzyzanowskim/OpenSSL.git
+      git clone https://github.com/krzyzanowskim/OpenSSL
       pushd OpenSSL
       git checkout refs/tags/3.3.3001
       popd
     fi
     
     if [ ! -d ios-cmake ] ; then
-      git clone git@github.com:leetal/ios-cmake.git
+      git clone https://github.com/leetal/ios-cmake
       pushd ios-cmake
       git checkout refs/tags/4.5.0
       popd

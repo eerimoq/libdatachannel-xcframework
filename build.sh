@@ -10,9 +10,9 @@ set -euo pipefail
 
 function clone_and_patch() {
     if [ ! -d libdatachannel ] ; then
-      git clone https://github.com/paullouisageneau/libdatachannel
+      git clone https://github.com/eerimoq/libdatachannel
       pushd libdatachannel
-      git checkout refs/tags/v0.24.1
+      git checkout refs/tags/v0.25.0
       git submodule update --init --recursive --depth 1
       pushd deps/libsrtp
       git apply ../../../libsrtp.patch

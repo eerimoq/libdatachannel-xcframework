@@ -12,7 +12,7 @@ function clone_and_patch() {
     if [ ! -d libdatachannel ] ; then
       git clone https://github.com/eerimoq/libdatachannel
       pushd libdatachannel
-      git checkout refs/tags/v0.26.0
+      git checkout refs/tags/v0.27.0
       git submodule update --init --recursive --depth 1
       pushd deps/libsrtp
       git apply ../../../libsrtp.patch
